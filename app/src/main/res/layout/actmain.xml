@@ -22,61 +22,61 @@
             android:layout_height="wrap_content"
             android:textColor="#FF5809"
             android:text=" 帳號"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/lblId"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FF5809"
             android:text=" 姓名"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/lblName"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" 電話"
             android:textColor="#FF5809"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/lblPhone"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FF5809"
             android:text=" 電子郵件"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/lblEmail"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FF5809"
             android:text=" 聯絡地址"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/lblAddress"
-            android:textSize="30dp"/>
+            android:textSize="32dp"/>
 
 
 
