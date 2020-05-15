@@ -14,7 +14,7 @@ public class ActList extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actlist);
+        setContentView(R.layout.actmain);//wrong
         InitialComponent();
     }
 
