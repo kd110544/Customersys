@@ -90,42 +90,42 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@drawable/icon1"
+            android:background="@drawable/previous"
             android:id="@+id/btnFirst"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@drawable/icon1"
+            android:background="@drawable/left"
             android:id="@+id/btnPrevious"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@drawable/icon1"
+            android:background="@drawable/right"
             android:id="@+id/btnNext"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@drawable/icon1"
+            android:background="@drawable/next"
             android:id="@+id/btnLast"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@drawable/icon1"
+            android:background="@drawable/search"
             android:id="@+id/btnSearch"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
 
-            android:background="@drawable/icon1"
+            android:background="@drawable/list"
             android:id="@+id/btnList"/>
 
 

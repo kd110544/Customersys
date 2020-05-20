@@ -14,8 +14,14 @@ public class ActList extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actmain);//wrong
-        InitialComponent();
+
+        String[] user = {"1","1","1","1","1","1"};
+        ListAdapter adapter = new ArrayAdapter<String>
+                (this,
+                        android.R.layout.simple_list_item_1,
+                        user);
+        setListAdapter(adapter);
+
     }
 
     private void InitialComponent() {
