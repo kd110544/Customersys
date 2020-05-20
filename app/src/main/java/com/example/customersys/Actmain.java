@@ -68,14 +68,36 @@ public class Actmain extends Activity {
         @Override
         public void onClick(View v) {
 
-           Intent intent = new Intent(Actmain.this, ActList.class);
-           startActivity(intent);
+            startActivityForResult(new Intent(Actmain.this, ActList.class),1997);
 
         }
     };
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==1997){
+            if(data==null){
+                return;
+            }
+            if(data.getExtras()==null){
+                return;
+            }
+
+            int position = Integer.parseInt(data.getExtras().getString("GGG"));
+            factory.MoveTo(position);
+            DisplayCustomerInfo();
+            //txtId.setText("收到"+position);
+            //txtName.setText("收到"+position);
+            //txtPhone.setText("收到"+position);
+            //txtEmail.setText("收到"+position);
+            //txtAddress.setText("收到"+position);
 
 
+
+        }
+    }
 
 
 
