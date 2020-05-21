@@ -68,7 +68,18 @@ public class Actmain extends Activity {
         @Override
         public void onClick(View v) {
 
-            startActivityForResult(new Intent(Actmain.this, ActList.class),1997);
+            String[] customers = new String[factory.GetAll().length];
+            for (int i=0;i<customers.length;i++){
+                customers[i]=factory.GetAll()[i].getName()+
+                        "\r\n"+factory.GetAll()[i].getPhone()+
+                        " / "+factory.GetAll()[i].getEmail();
+            }
+
+            Bundle bund = new Bundle();
+            bund.putStringArray(CDictionary.BK_CUSTOMER_NAMES_LIST,customers);
+            Intent intent = new Intent(Actmain.this, ActList.class);
+            intent.putExtras(bund);
+            startActivityForResult(intent, CDictionary.AID_ACTLIST);
 
         }
     };
@@ -77,7 +88,7 @@ public class Actmain extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode==1997){
+        if(requestCode==CDictionary.AID_ACTLIST){
             if(data==null){
                 return;
             }
@@ -85,16 +96,9 @@ public class Actmain extends Activity {
                 return;
             }
 
-            int position = Integer.parseInt(data.getExtras().getString("GGG"));
+            int position = data.getExtras().getInt(CDictionary.BK_SELECTED_CUSTOMER_POSITION);
             factory.MoveTo(position);
             DisplayCustomerInfo();
-            //txtId.setText("收到"+position);
-            //txtName.setText("收到"+position);
-            //txtPhone.setText("收到"+position);
-            //txtEmail.setText("收到"+position);
-            //txtAddress.setText("收到"+position);
-
-
 
         }
     }

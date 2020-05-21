@@ -25,15 +25,20 @@ public class ActList extends ListActivity {
         CCustomer c4 = factory.GetAll()[4];
 
         //String[] user2 = factory.GetAll()[0];
-        String[] user = {c0.getName()+" / " +c0.getEmail(),
+        String[] user = {
+                c0.getName()+" / " +c0.getEmail(),
                 c1.getName()+" / " +c1.getEmail(),
                 c2.getName()+" / " +c2.getEmail(),
                 c3.getName()+" / " +c3.getEmail(),
                 c4.getName()+" / " +c4.getEmail()};
+
+        Bundle bundle = getIntent().getExtras();
+        String[] customerNames=bundle.getStringArray(CDictionary.BK_CUSTOMER_NAMES_LIST);
+
         ListAdapter adapter = new ArrayAdapter<String>
                 (this,
                         android.R.layout.simple_list_item_1,
-                        user);
+                        customerNames);
         setListAdapter(adapter);
 
 
@@ -46,7 +51,7 @@ public class ActList extends ListActivity {
         super.onListItemClick(l, v, position, id);
 
         Bundle bund = new Bundle();
-        bund.putString("GGG",String.valueOf(position));
+        bund.putInt(CDictionary.BK_SELECTED_CUSTOMER_POSITION,position);
         Intent intent = new Intent();
         intent.putExtras(bund);
 
